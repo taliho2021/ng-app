@@ -1,0 +1,31 @@
+<div class="outerContainer">
+  <h1
+    style="
+      font-weight: bolder;
+      background-color: rgb(0, 183, 255);
+      text-align: center;
+    "
+  >
+    Air AMS
+  </h1>
+
+  <mat-tab-group mat-align-tabs="start" style="color: pink">
+    <mat-tab label="Air AMS Dashboard">
+      <ng-app-air-ams-dashboard></ng-app-air-ams-dashboard>
+    </mat-tab>
+
+    <mat-tab label="Air AMS Grid">
+      <ng-app-air-ams-detail></ng-app-air-ams-detail>
+    </mat-tab>
+
+    <mat-tab label="New Air AMS">
+      <div class="container">
+        <ng-app-air-ams-summary></ng-app-air-ams-summary>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+  <button type="button" class="btn btn-link" routerLink="/home/nav/">
+    Back to Mainpage
+  </button>
+</div>

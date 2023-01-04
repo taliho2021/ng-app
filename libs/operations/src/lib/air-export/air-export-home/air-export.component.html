@@ -10,14 +10,17 @@
   </h1>
 
   <mat-tab-group mat-align-tabs="start" style="color: pink">
-    <mat-tab label="Air AMS Dashboard">
+    <mat-tab label="Air Export Dashboard">
+      <ng-app-air-export-dashboard></ng-app-air-export-dashboard>
     </mat-tab>
 
-    <mat-tab label="Air AMS Grid">
+    <mat-tab label="Air Export Grid">
+      <ng-app-air-export-detail></ng-app-air-export-detail>
     </mat-tab>
 
-    <mat-tab label="New Air AMS">
+    <mat-tab label="New Air Export">
       <div class="container">
+        <ng-app-air-export-summary></ng-app-air-export-summary>
       </div>
     </mat-tab>
   </mat-tab-group>
