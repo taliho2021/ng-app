@@ -21,7 +21,8 @@
       "@ng-app/material": ["libs/material/src/index.ts"],
       "@ng-app/ocean": ["libs/ocean/src/index.ts"],
       "@ng-app/operations": ["libs/operations/src/index.ts"],
-      "@ng-app/products": ["libs/products/src/index.ts"]
+      "@ng-app/products": ["libs/products/src/index.ts"],
+      "@ng-app/services": ["libs/services/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
