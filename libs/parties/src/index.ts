@@ -9,3 +9,5 @@ export * from './lib/parties/clients/clients.component';
 export * from './lib/parties/vendors/vendors.component';
 
 export * from './lib/parties/manufacturers/manufacturers.component';
+
+export * from './lib/parties/forwarders/forwarders.component';

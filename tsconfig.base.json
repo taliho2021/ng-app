@@ -23,6 +23,7 @@
       "@ng-app/operations": ["libs/operations/src/index.ts"],
       "@ng-app/parties": ["libs/parties/src/index.ts"],
       "@ng-app/products": ["libs/products/src/index.ts"],
+      "@ng-app/services": ["libs/services/src/index.ts"],
       "@ng-app/views": ["libs/views/src/index.ts"]
     }
   },

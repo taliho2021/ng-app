@@ -1,15 +1,16 @@
 import { CommonModule } from '@angular/common';
 
 import { Component } from '@angular/core';
-import { UntypedFormArray, UntypedFormBuilder, Validators } from '@angular/forms';
+import { ReactiveFormsModule, UntypedFormArray, UntypedFormBuilder, Validators } from '@angular/forms';
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { Importer } from '@ng-app/data-models';
-import * as States from '../../../../../../libs/'
+import { MaterialModule } from '@ng-app/material';
+import { ImportersService } from '@ng-app/services'
 
 @Component({
   selector: 'ng-app-carriers',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MaterialModule, ReactiveFormsModule],
   templateUrl: './carriers.component.html',
   styleUrls: ['./carriers.component.scss'],
 })
@@ -68,14 +69,13 @@ export class CarriersComponent {
     this.additional.push(addtionalInfo)
   }
 
-  states = States
 
   onSubmit(): void {
     this.importerService.getAll()
-       .subscribe((data: Importer[]) => (this.importers =data));
     console.log(this.importers);
 
     alert('Thanks!');
+
   }
 
 }
