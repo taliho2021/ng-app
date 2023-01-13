@@ -1,3 +1,4 @@
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { CommonModule } from '@angular/common';
 
 import { Component } from '@angular/core';
@@ -5,7 +6,6 @@ import { ReactiveFormsModule, UntypedFormArray, UntypedFormBuilder, Validators }
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { Importer } from '@ng-app/data-models';
 import { MaterialModule } from '@ng-app/material';
-import { ImportersService } from '@ng-app/services'
 
 @Component({
   selector: 'ng-app-carriers',
@@ -51,7 +51,7 @@ export class CarriersComponent {
   hasUnitNumber = false;
   importers: Importer[] =[];
 
-  constructor(private fb: UntypedFormBuilder, private importerService : ImportersService) { }
+  constructor(private fb: UntypedFormBuilder) { }
 
 
 
@@ -71,7 +71,6 @@ export class CarriersComponent {
 
 
   onSubmit(): void {
-    this.importerService.getAll()
     console.log(this.importers);
 
     alert('Thanks!');

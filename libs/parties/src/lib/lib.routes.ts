@@ -8,9 +8,9 @@ import { VendorsComponent } from './parties/vendors/vendors.component';
 
 export const partiesRoutes: Route[] = [
   { path: '', component: PartiesComponent },
-  { path: 'carriers', component: CarriersComponent},
-  { path: 'clients', component: ClientsComponent},
-  { path: 'manufacturers', component: ManufacturersComponent},
-  { path: 'vendors', component: VendorsComponent},
-  { path: 'forwarders', component: ForwardersComponent}
+  { path: 'carriers', pathMatch: 'full', component: CarriersComponent},
+  { path: 'clients',  pathMatch: 'full', component: ClientsComponent},
+  { path: 'manufacturers',  pathMatch: 'full', component: ManufacturersComponent},
+  { path: 'vendors',  pathMatch: 'full', component: VendorsComponent},
+  { path: 'forwarders',  pathMatch: 'full', component: ForwardersComponent}
 ];
