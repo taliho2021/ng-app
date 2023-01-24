@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { partiesRoutes } from '../lib.routes';
 
 @Component({
   selector: 'ng-app-parties',

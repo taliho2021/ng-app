@@ -12,10 +12,12 @@ export class AuthService {
   user!: User;
   private userSubject$ = new BehaviorSubject<User>(this.user);
   user$ = this.userSubject$.asObservable();
+
   constructor(private httpClient: HttpClient) {}
+
   login(authenticate: Authenticate): Observable<User> {
     return this.httpClient
-      .post<User>('http://localhost:3000/login', authenticate)
+      .post<User>('http://localhost:8000/auth/signin', authenticate)
       .pipe(tap((user: User) => this.userSubject$.next(user)));
   }
 }

@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { MaterialModule } from '@ng-app/material'
+import { MaterialModule } from '@ng-app/material';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'ng-app-ocean-home',
   standalone: true,
-  imports: [CommonModule, MaterialModule],
+  imports: [CommonModule, MaterialModule, RouterModule],
   templateUrl: './ocean-home.component.html',
   styleUrls: ['./ocean-home.component.scss'],
 })

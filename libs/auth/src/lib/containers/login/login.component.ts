@@ -1,7 +1,8 @@
+import { Authenticate, User } from '@ng-app/data-models';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 import { AuthService } from '../../services/auth/auth.service';
-import { Authenticate } from '@ng-app/data-models';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'ng-app-login',
@@ -10,10 +11,13 @@ import { Authenticate } from '@ng-app/data-models';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginComponent implements OnInit {
+  user$!: Observable<User>;
   constructor(private authService: AuthService) {}
 
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method, @typescript-eslint/no-empty-function
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.user$ = this.authService.user$;
+  }
 
   login(authenticate: Authenticate): void {
     this.authService.login(authenticate).subscribe();
