@@ -12,14 +12,13 @@ import { Observable } from 'rxjs';
 })
 export class LoginComponent implements OnInit {
   user$!: Observable<User>;
-  constructor(private authService: AuthService) {}
+  constructor() {}
 
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method, @typescript-eslint/no-empty-function
   ngOnInit(): void {
-    this.user$ = this.authService.user$;
   }
 
-  login(authenticate: Authenticate): void {
-    this.authService.login(authenticate).subscribe();
-  }
+  // login(authenticate: Authenticate): void {
+  //   this.authService.login(authenticate).subscribe();
+  // }
 }
