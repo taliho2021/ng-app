@@ -427,6 +427,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
         }
       }
     </style>
+
     <div class="wrapper">
       <div class="container">
         <!--  WELCOME  -->
