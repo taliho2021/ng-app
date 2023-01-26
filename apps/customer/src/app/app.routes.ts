@@ -7,6 +7,7 @@ import { Route } from '@angular/router';
 import { authRoutes } from '@ng-app/auth';
 import { oceanRoutes } from '@ng-app/ocean';
 import { partiesRoutes } from '@ng-app/parties';
+import { operationsRoutes } from '@ng-app/operations';
 
 export const appRoutes: Route[] = [
   { path: '', component: HomeComponent },
@@ -27,6 +28,7 @@ export const appRoutes: Route[] = [
     path: 'parties',
     children: partiesRoutes,
   },
+  { path: 'operations', children: operationsRoutes},
   {
     path: 'auth',
     children: authRoutes,
