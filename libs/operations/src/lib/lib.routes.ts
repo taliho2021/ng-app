@@ -2,14 +2,15 @@ import { AirExportComponent } from './air-export/air-export-home/air-export.comp
 import { CmsqComponent } from './cmsq/cmsq.component';
 import { IsfComponent } from './isf/isf.component';
 import { Route } from '@angular/router';
+import { airamsRoutes } from './air-ams/air-ams-routes';
+import { airexportRoutes } from './air-export/air-export-routes';
 
 export const operationsRoutes: Route[] = [
   {
     path: 'air-ams',
-    loadChildren: () =>
-      import('./air-ams/air-ams-routes').then((mod) => mod.airamsRoutes),
+    children: airamsRoutes,
   },
-  { path: 'air-export', component: AirExportComponent },
+  { path: 'air-export', children: airexportRoutes },
   { path: 'cmsq', component: CmsqComponent },
   { path: 'isf', component: IsfComponent },
   {

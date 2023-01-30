@@ -1,12 +1,8 @@
-export * from './lib/operations.module';
-
 export * from './lib/lib.routes';
 
 export * from './lib/air-ams/air-ams-home/air-ams.component';
 
 export * from './lib/air-export/air-export-home/air-export.component';
-
-export * from './lib/air-import/air-import.component';
 
 export * from './lib/cmsq/cmsq.component';
 
