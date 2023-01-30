@@ -4,13 +4,14 @@ import { AgGridModule } from 'ag-grid-angular';
 import { ColDef } from 'ag-grid-community';
 
 @Component({
-  selector: 'ng-app-air-export-grid',
+  selector: 'ng-app-isf-grid',
   standalone: true,
   imports: [CommonModule, AgGridModule],
-  templateUrl: './air-export-grid.component.html',
-  styleUrls: ['./air-export-grid.component.scss'],
+  templateUrl: './isf-grid.component.html',
+  styleUrls: ['./isf-grid.component.scss'],
 })
-export class AirExportGridComponent {columnDefs: ColDef[] = [
+export class IsfGridComponent {
+  columnDefs: ColDef[] = [
     {
       field: 'refNo',
       sortable: true,

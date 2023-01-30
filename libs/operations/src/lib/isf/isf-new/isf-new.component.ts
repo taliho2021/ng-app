@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'ng-app-isf',
+  selector: 'ng-app-isf-new',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './isf.component.html',
-  styleUrls: ['./isf.component.scss'],
+  templateUrl: './isf-new.component.html',
+  styleUrls: ['./isf-new.component.scss'],
 })
-export class IsfComponent {}
+export class IsfNewComponent {}

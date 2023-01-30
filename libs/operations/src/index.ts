@@ -8,8 +8,6 @@ export * from './lib/cmsq/cmsq.component';
 
 export * from './lib/customs-brokerage/customs-brokerage.component';
 
-export * from './lib/isf/isf.component';
-
 export * from './lib/air-ams/air-ams-dashboard/air-ams-dashboard.component';
 
 export * from './lib/air-ams/air-ams-grid/air-ams-grid.component';
@@ -27,3 +25,11 @@ export * from './lib/air-export/air-export-grid/air-export-grid.component';
 export * from './lib/air-export/air-export-dashboard/air-export-dashboard.component';
 
 export * from './lib/operations-home/operations-home.component';
+
+export * from './lib/isf/isf-new/isf-new.component';
+
+export * from './lib/isf/isf-dashboard/isf-dashboard.component';
+
+export * from './lib/isf/isf-detail/isf-detail.component';
+
+export * from './lib/isf/isf-grid/isf-grid.component';
