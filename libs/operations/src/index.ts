@@ -25,3 +25,5 @@ export * from './lib/air-export/air-export-detail/air-export-detail.component';
 export * from './lib/air-export/air-export-grid/air-export-grid.component';
 
 export * from './lib/air-export/air-export-dashboard/air-export-dashboard.component';
+
+export * from './lib/operations-home/operations-home.component';
