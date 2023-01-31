@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AgGridModule } from 'ag-grid-angular';
 import { ColDef } from 'ag-grid-community';
+import { Entry } from '@ng-app/data-models/';
 
 @Component({
   selector: 'ng-app-air-export-grid',
@@ -10,6 +11,8 @@ import { ColDef } from 'ag-grid-community';
   templateUrl: './air-export-grid.component.html',
   styleUrls: ['./air-export-grid.component.scss'],
 })
+
+
 export class AirExportGridComponent {columnDefs: ColDef[] = [
     {
       field: 'refNo',
