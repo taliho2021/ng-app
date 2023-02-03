@@ -28,7 +28,7 @@ export const appRoutes: Route[] = [
     path: 'parties',
     children: partiesRoutes,
   },
-  { path: 'operations', children: operationsRoutes},
+  { path: 'operations', children: operationsRoutes },
   {
     path: 'auth',
     children: authRoutes,

@@ -8,8 +8,7 @@ import { AuthModule } from '@ng-app/auth';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports : [RouterModule,  AuthModule,
-    LayoutModule]
+  imports: [RouterModule, AuthModule, LayoutModule],
 })
 export class AppComponent {
   title = 'customer-portal';

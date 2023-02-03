@@ -11,9 +11,8 @@ import { Entry } from '@ng-app/data-models/';
   templateUrl: './air-export-grid.component.html',
   styleUrls: ['./air-export-grid.component.scss'],
 })
-
-
-export class AirExportGridComponent {columnDefs: ColDef[] = [
+export class AirExportGridComponent {
+  columnDefs: ColDef[] = [
     {
       field: 'refNo',
       sortable: true,

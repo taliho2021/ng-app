@@ -15,8 +15,7 @@ export class LoginComponent implements OnInit {
   constructor() {}
 
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method, @typescript-eslint/no-empty-function
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   // login(authenticate: Authenticate): void {
   //   this.authService.login(authenticate).subscribe();

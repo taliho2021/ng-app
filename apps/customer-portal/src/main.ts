@@ -5,8 +5,5 @@ import { RouterModule } from '@angular/router';
 import { importProvidersFrom } from '@angular/core';
 
 bootstrapApplication(AppComponent, {
-  providers: [
-    importProvidersFrom(RouterModule.forRoot(appRoutes))
-  ]
-})
-.catch(err =>console.log(err));
+  providers: [importProvidersFrom(RouterModule.forRoot(appRoutes))],
+}).catch((err) => console.log(err));

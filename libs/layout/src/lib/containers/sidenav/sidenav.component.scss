@@ -10,7 +10,7 @@
 
   &:hover,
   &:focus {
-    >.mat-mdc-list-item:not(.expanded) {
+    > .mat-mdc-list-item:not(.expanded) {
       background-color: ivory;
     }
   }

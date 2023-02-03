@@ -4,13 +4,12 @@ import { NgModule } from '@angular/core';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserRoutingModule } from './user-routing.module';
 @NgModule({
-  declarations: [
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     UserRoutingModule,
     HttpClientModule,
-    UserListComponent
-  ]
+    UserListComponent,
+  ],
 })
-export class UserModule { }
+export class UserModule {}

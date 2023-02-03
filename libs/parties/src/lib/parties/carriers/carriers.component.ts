@@ -2,7 +2,12 @@
 import { CommonModule } from '@angular/common';
 
 import { Component } from '@angular/core';
-import { ReactiveFormsModule, UntypedFormArray, UntypedFormBuilder, Validators } from '@angular/forms';
+import {
+  ReactiveFormsModule,
+  UntypedFormArray,
+  UntypedFormBuilder,
+  Validators,
+} from '@angular/forms';
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { Importer } from '@ng-app/data-models';
 import { MaterialModule } from '@ng-app/material';
@@ -15,24 +20,29 @@ import { MaterialModule } from '@ng-app/material';
   styleUrls: ['./carriers.component.scss'],
 })
 export class CarriersComponent {
-  cust = 'Korean Airlines'
-  openAmt = 20000
-  overDue = 1000
-  crLimit = 50000
+  cust = 'Korean Airlines';
+  openAmt = 20000;
+  overDue = 1000;
+  crLimit = 50000;
 
   importerForm = this.fb.group({
     clientId: null,
-    name:  [null, Validators.required],
+    name: [null, Validators.required],
     address1: [null, Validators.required],
     address2: [null, Validators.required],
     city: [null, Validators.required],
     state: [null, Validators.required],
-    postalCode: [null, Validators.compose([
-      Validators.required, Validators.minLength(5), Validators.maxLength(5)])
+    postalCode: [
+      null,
+      Validators.compose([
+        Validators.required,
+        Validators.minLength(5),
+        Validators.maxLength(5),
+      ]),
     ],
     country: [null, Validators.required],
-    phone1:  [null, Validators.required],
-    email:  [null, Validators.required],
+    phone1: [null, Validators.required],
+    email: [null, Validators.required],
     website: [null, Validators.required],
 
     bond: this.fb.group({
@@ -41,22 +51,19 @@ export class CarriersComponent {
       amount: [''],
       suretyCode: [''],
       portFiled: [''],
-      holderName: ['']
+      holderName: [''],
     }),
 
-    addInfo: this.fb.array([])
-
+    addInfo: this.fb.array([]),
   });
 
   hasUnitNumber = false;
-  importers: Importer[] =[];
+  importers: Importer[] = [];
 
-  constructor(private fb: UntypedFormBuilder) { }
-
-
+  constructor(private fb: UntypedFormBuilder) {}
 
   get additional() {
-    return this.importerForm.controls["addInfo"] as UntypedFormArray
+    return this.importerForm.controls['addInfo'] as UntypedFormArray;
   }
 
   addaddInfo() {
@@ -64,17 +71,14 @@ export class CarriersComponent {
       tel2: ['', Validators.required],
       email2: [''],
       tel3: [''],
-      email3:['']
-    })
-    this.additional.push(addtionalInfo)
+      email3: [''],
+    });
+    this.additional.push(addtionalInfo);
   }
-
 
   onSubmit(): void {
     console.log(this.importers);
 
     alert('Thanks!');
-
   }
-
 }

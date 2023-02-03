@@ -1,20 +1,20 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import {Event, NavigationEnd, Router} from '@angular/router';
+import { Event, NavigationEnd, Router } from '@angular/router';
 import { EventEmitter, Injectable } from '@angular/core';
 
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SidebarNavService {
   public appDrawer: any;
-  public currentUrl = new BehaviorSubject("");
+  public currentUrl = new BehaviorSubject('');
 
   constructor(private router: Router) {
-  this.router.events.subscribe((event: Event) => {
+    this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
-        this.currentUrl.next(event.urlAfterRedirects)
+        this.currentUrl.next(event.urlAfterRedirects);
       }
     });
   }
